@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6 Lab</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Link to external JavaScript file -->
+    <script src="scripts/add_course.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <!-- Brand Logo / Name -->
+            <a class="navbar-brand" href="/index.html">Instructor View</a>
+            
+            <!-- Mobile Toggle Button (Hamburger Menu) 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            -->
+            
+            <!-- Navbar Links and Components 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Songs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add_song.html">Add Song</a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+            -->
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Sidebar Column -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse border-end vh-100 p-3">
+              <div class="position-sticky pt-3">
+                <!-- Optional Brand/Logo Header -->
+                <h5 class="px-3 mb-4 text-muted">Navbar Heading</h5>
+                
+                <!-- Vertical Button Navigation Stack -->
+                <div class="nav flex-column nav-pills">
+                    <a class="nav-link mb-2 text-start" href = "/index.html">Available Courses</a>
+                    <a class="nav-link active mb-2 text-start" href = "/add_course.html">Add Course</a>
+                </div>
+              </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="col-md-8 ms-sm-auto col-lg-10 px-md-4 pt-3">
+                <div class = "row">
+                    <div class = "col-md-12">
+                        <h3>Add Course</h3>
+
+                            <div id = "success" class = "alert alert-success" style = "display:none;"></div>
+                            <div id = "error" class = "alert alert-danger"  style = "display:none;"></div>
+
+                            <form id = "addCourseForm">
+
+                            <div class="form-group row">
+                                <label for="title" class="col-sm-1 col-form-label">Course Name:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                            </div>
+
+                            <div id = "success" class = "alert alert-success" style = "display:none;"></div>
+                            <div id = "error" class = "alert alert-danger"  style = "display:none;"></div>
+                            <button type="submit" id = "addBtn" class = "btn btn-primary">Add Course</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
